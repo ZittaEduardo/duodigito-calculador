@@ -21,10 +21,10 @@ public class pesquisado {
 	private long id;
 	
 	@Column(name = "Pesquisa")
-	private double input;
+	private long input;
 	
 	@Column(name = "Resultado")
-	private double resultado;
+	private long resultado;
 	
 	@Column(name = "Tempo")
 	private long tempo;
@@ -33,7 +33,7 @@ public class pesquisado {
 		
 	}
 	
-	public pesquisado(double input, double resultado, long tempo) {
+	public pesquisado(long input, long resultado, long tempo) {
 		super();
 		this.input = input;
 		this.resultado = resultado;
@@ -46,16 +46,16 @@ public class pesquisado {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public double getInput() {
+	public long getInput() {
 		return input;
 	}
-	public void setInput(double input) {
+	public void setInput(long input) {
 		this.input = input;
 	}
-	public double getResultado() {
+	public long getResultado() {
 		return resultado;
 	}
-	public void setResultado(double numero) {
+	public void setResultado(long numero) {
 		long tempoInicial = System.currentTimeMillis();
 		int n = 2;
 		this.resultado = menorDuoDigito(numero, n);
@@ -68,7 +68,7 @@ public class pesquisado {
 		this.tempo = tempo;
 	}
 	
-	boolean isDuoDigit(double numero) {
+	boolean isDuoDigit(long numero) {
 		int conta = 0;
         List<Integer> intList = new ArrayList<Integer>();
         while (numero > 0) {
@@ -88,13 +88,13 @@ public class pesquisado {
         return true;	
 	}
 	
-	double menorDuoDigito(double numero, int n) {
+	long menorDuoDigito(long numero, int n) {
 		if(isDuoDigit(numero * n) == true) {
 			return (numero * n);
 		}
 		else {
 			n++;
-			return menorDuoDigito(numero * n, n);
+			return menorDuoDigito(numero, n);
 		}
 	}
 	

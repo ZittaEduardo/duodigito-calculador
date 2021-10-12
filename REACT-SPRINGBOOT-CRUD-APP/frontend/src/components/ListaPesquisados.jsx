@@ -20,7 +20,7 @@ class ListaPesquisados extends Component {
     calculaDuoDigito(){
         this.props.history.push('/calcula-duodigito');
     }
-    
+
     render() {
         return (
             <div>
@@ -33,9 +33,9 @@ class ListaPesquisados extends Component {
                         
                         <thead>
                             <tr>
-                                <th>Pesquisa numero</th>
-                                <th>Pesquisa resultado</th>
-                                <th>Pesquisa tempo</th>
+                                <th>Numero</th>
+                                <th>Resultado</th>
+                                <th>Tempo (ms)</th>
                             </tr>
                         </thead>
 

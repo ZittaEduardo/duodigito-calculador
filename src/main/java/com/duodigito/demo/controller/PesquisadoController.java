@@ -30,7 +30,7 @@ public class PesquisadoController {
 	//Cria pesquisa REST API
 	@PostMapping("/pesquisados")
 	public pesquisado createPesquisado(@RequestBody pesquisado pesquisado) {
-		double numero = pesquisado.getInput();
+		long numero = pesquisado.getInput();
 		pesquisado.setResultado(numero);
 		pesquisado pesquisador = pesquisado;
 		return RepositorioPesquisa.save(pesquisador);
