@@ -22,7 +22,6 @@ public class PesquisadoController {
 	private RepositorioPesquisa RepositorioPesquisa;
 	
 	//Pega todas pesquisas
-	
 	@GetMapping("/pesquisados")
 	public List<pesquisado> getAllPesquisados(){
 		return RepositorioPesquisa.findAll();
@@ -31,7 +30,10 @@ public class PesquisadoController {
 	//Cria pesquisa REST API
 	@PostMapping("/pesquisados")
 	public pesquisado createPesquisado(@RequestBody pesquisado pesquisado) {
-		return RepositorioPesquisa.save(pesquisado);
+		double numero = pesquisado.getInput();
+		pesquisado.setResultado(numero);
+		pesquisado pesquisador = pesquisado;
+		return RepositorioPesquisa.save(pesquisador);
 	}
 	
 }
