@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ServiçoPesquisa from '../services/ServiçoPesquisa';
 
+
 class CriaDuoDigito extends Component {
     constructor(props){
         super(props)
@@ -13,7 +14,7 @@ class CriaDuoDigito extends Component {
     }
 
     changeNumeroHandler = (event) => {
-        this.setState({input: event.target.value});
+        this.setState({input: event.target.value.replace(/[^0-9]/g, '')});
     }
 
     pesquisaDuoDigito = (e) => {
