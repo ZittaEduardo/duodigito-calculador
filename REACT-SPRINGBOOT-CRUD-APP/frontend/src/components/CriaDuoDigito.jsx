@@ -14,7 +14,7 @@ class CriaDuoDigito extends Component {
     }
 
     changeNumeroHandler = (event) => {
-        this.setState({input: event.target.value.replace(/[^0-9]/g, '')});
+        this.setState({input: event.target.value.replace(/[^0-9]/g, '')}); //Possibilita somente a entrada de números
     }
 
     pesquisaDuoDigito = (e) => {
