@@ -4,7 +4,7 @@ Calcula o minimo multiplo duodigito do número dado pelo usuário e guarda o his
 
 ## Descrição
 
-O Projeto foi desenvolvido por backend através do springboot em linguagem java e por frontend através do react JS. Para guardar o histórico de pesquisa da aplicação foi utilizado o banco de dados do MySQL.
+O Projeto foi desenvolvido por backend através do springboot em linguagem java e por frontend através do react JS. Para guardar o histórico de pesquisa da aplicação foi utilizado o banco de dados do MySQL com auxilio do JPA.
 
 ## Getting Started
 ### Dependencies
